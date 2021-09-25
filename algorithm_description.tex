@@ -1,0 +1,42 @@
+\section{Algorithm's Nature}
+
+As it was mentioned before, the algorithm is based in the optimization's process of the human race described on the book, thus we
+are talking about an algorithm based in the evolution of a population, it will follow the structure of evolutionary algorithms
+specifically a \textit{genetic algorithm}. The book describes how they achieved the perfect human race working with an assembly 
+line with different phases. This will be reflected with a \textit{generational evolutionary algorithm} with selection, 
+crossover, mutation and replacement operators.
+
+The process begins in the \textbf{\textit{Fecundation Room}}, here the eggs are created and fertilized. Once the fertilization
+is finished all the eggs got to the \textbf{\textit{Hatchery}} where the caste to which each individual will belong is decided. 
+Huxley describes how the higher castes (\textit{Alpha} and \textit{Beta}) are suministred a higher amount of nutrients and hormones during the 
+incubation. While the lower castes (\textit{Gamma}, \textit{Delta}, and \textit{Epsilon}) are deprived of these elements, needed for the development.
+To imitate this ``lack of nutrients``, in the algorithm developed we will deprive the lower castes of the operators, they will only mutate. 
+With all that has been mentioned, the castes will be developed in the following way :
+
+\begin{itemize}
+    \item \textbf{Alphas}: in the books they are the most intelligents, the elite belongs to this group. They have responsibilities, they are
+    ones that take decisions. In our implementation they will be reproduced with other individuals of the caste and they will evolve with
+    all the operators.
+    \item \textbf{Betas}: in the book they are less intelligents that the before mentioned and their main role is working in administrative tasks.
+    In the implementation, the crossover will only be with individuals from the Alpha caste,
+    \item \textbf{Gammas}: in the book they are subordinates, whose tasks require hability. In the implementation they will only mutate, but using local
+    search
+    \item \textbf{Deltas} and \textbf{Epsilons}: in the book both these castes are employees of the other castes and do repetitive works. In the 
+    implementation they will only have mutation by fixed segment. 
+\end{itemize}
+
+With this structure in min the metaheuristic will be divided in the following phases :
+
+\begin{itemize}
+    \item \textbf{Fecundation room}: the individuals are created in a randomized way.
+    \item \textbf{Hatchery room}: in this phase we will divide the population in castes. We will do this following the fitness value
+    of the individual as the criteria. Furthermore, each caste will have a different population percentage. Because in the book they
+    mention that lower castes are produced with the \textit{Bokanovsky's process}, where an ambryo its divided into 96 identical twins.
+    In the algorithm this will be reflected in the population size, that will descende when the caste is higher.
+    \item \textbf{Caste evolution}: each caste will follow a different process, as it was mentioned before
+\end{itemize}
+
+We are not talking about static castes, they are generated at the beginning of each generation. Let's imagine that we have a poplation size of ten, 
+each individual with a fitness value. In the fist iteration the population will be divided following that value. After that, each individual will 
+follow the evolution process corresponding to the caste. At the end of each generation all the chromosomes will be mixed, regardless of the caste. The
+next generation will start dividing this chromosomes in castes again. 
