@@ -5,12 +5,14 @@
 \documentclass[runningheads]{llncs}
 %
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
 % If you use the hyperref package, please uncomment the following line
 % to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 
 \begin{document}
 %
@@ -54,9 +56,10 @@ Investigating how the division in castes affects the diversity in the poblation.
 %
 %
 
-\input{sample_section}
+% \input{sample_section}
 \input{introduction}
 \input{algorithm_description}
+\input{first_experiment}
 
 %
 % ---- Bibliography ----
@@ -68,8 +71,17 @@ Investigating how the division in castes affects the diversity in the poblation.
 % \bibliography{mybibliography}
 %
 \begin{thebibliography}{8}
-\bibitem{ref_article1}
-Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+\bibitem{Rosca}
+J. P. Rosca: Entropy-driven adaptive representation. Proc. Workshop Genetic Programming: From Theory to Real-World Applications, 23--32 (1995)
+
+\bibitem{genetic}
+J. R. McDonnell: Genetic programming exploratory power and the discovery of functions, 719--736 (1995)
+
+\bibitem{Burke}
+Burke, Edmund and Gustafson, Steven and Kendall, Graham: Diversity in Genetic Programming: An Analysis of Measures and Correlation With Fitness. Evolutionary Computation, IEEE Transactions on \textbf{8}, 47--62 (2004)
+
+\bibitem{BBOB}
+Steffen Finck and Nikolaus Hansen† and Raymond Ros‡ and Anne Auger§: Real-Parameter Black-Box Optimization Benchmarking 2010: Presentation of the Noiseless Functions, (2014)
 
 \bibitem{ref_lncs1}
 Author, F., Author, S.: Title of a proceedings paper. In: Editor,
