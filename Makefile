@@ -1,4 +1,4 @@
 all: pdf
 
 pdf: %.pdf: %.tex %.bib
-	pdflatex samplepaper.tex && pdflatex samplepaper.tex && pdflatex samplepaper.tex
+	pdflatex brave-new-algorithm.tex && bibtex brave-new-algorithm && pdflatex brave-new-algorithm.tex
