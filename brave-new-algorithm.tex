@@ -5,12 +5,14 @@
 \documentclass[runningheads]{llncs}
 %
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color}
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
 % If you use the hyperref package, please uncomment the following line
 % to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 
 \begin{document}
 %
@@ -54,16 +56,20 @@ Investigating how the division in castes affects the diversity in the poblation.
 %
 %
 
-
+% \input{sample_section}
 \input{introduction}
 \input{SoA}
 \input{algorithm_description}
+\input{first_experiment}
 
 %
 % ---- Bibliography ----
 %
 % BibTeX users should specify bibliography style 'splncs04'.
 % References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
 %
 \bibliographystyle{splncs04}
 \bibliography{brave-new-algorithm}
