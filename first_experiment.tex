@@ -66,3 +66,37 @@ when the entropy stays with similar values for multiple generations is when it g
 
 With this information we can now compare the diversity of our algorithm with the behaviour of a genetic algorithm without
 castes division.
+
+\subsection{Diversity on a basic genetic algoritm}
+
+We will now compare the diversity of the Brave new algorithm with a ``basic`` genetic algorith, meaning an algorithm without castes division, in order
+to check how the division affects the diversity.
+
+In Table \ref{tab:diversity_comparation} we can see the results comparation for both algorithms. Having a higher value on
+the entropy standard deviation means that the values are spread out over a wider range, this is the case for the Brave
+new algorithm. Also, it has a better median of the fitness value. In Figure \ref{fig:rastrigin_diversity_comparation} we can see
+how the entropy in the basic algorithm looks like more variant, but the values are only between 5 and 5.5
+
+For this section we can conclude that because the Brave new algorithm has a higher standard deviation on the entropy the 
+diversity is mainted throught more generations that for the basic genetic algorithm, resulting in better median for the firness value.
+
+\begin{table}[]
+    \centering
+    \caption{Entropy results for Brave New Algorithm (BNA) and a genetic algorith without castes division (GA)}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Algorithm} & \textbf{\begin{tabular}[c]{@{}c@{}}entropy\\ median\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}f. value\\ median\end{tabular}} & \textbf{entropy $\sigma$} & \textbf{f. value $\sigma$} \\ \hline
+    BNA                & 2.9                                                               & -39.56                                                             & 0.41             & 26.12             \\ \hline
+    GA                 & 5.27                                                              & 528.21                                                             & 0.01             & 224.09            \\ \hline
+    \end{tabular}
+    \label{tab:diversity_comparation}
+\end{table}
+
+\begin{figure}[]
+	\centering	
+	\includegraphics[scale=0.5]{./figures/Rastrigin_diversity_algs_comparation.png}
+	\caption{ Comparation of the diversity between the best executions of the Brave New Algorithm and a genetic algorith without castes division }
+    \label{fig:diversity_comparation}
+\end{figure}
+
+
