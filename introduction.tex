@@ -36,26 +36,24 @@ optimization algorithms, although of course the intention of the
 author was to compare collectivist and individualist culture
 \cite{mathews2012happiness}.
 
-When we talk about evolutionary algorithms the target is reaching the
-optimum solution for a problem, and this books perfectly describes
-the process through which they have reached the perfect human
-race. Therefore we want to develop an algorithm based on the book's
-fecundation proceses and compare its behaviour with other
-algorithms. Our main assumption during the design of this process is
-that the division in castes affects the
-poblation's diversity; we can draw a parallel between the
-collectivism/individualism tensions inherent in the novel and the
-exploration/exploitation balance in population based global
-algorithms, and thus try and apply their solutions to our
-problems. The main conclusion we draw from the book is that what makes
-collective society happy might make some individuals extremely
-isolated and sad; but if we apply this to our optimization realm we
-can see that what Aldous Huxley might be unwittingly proposing is the
-rough layout of an optimization algorithm, where individuals with 
-different fitnesses undergo different
-differentiation/evolution/reproduction processes. We will take it from
-here to design an optimization algorithm, which of course we call Brave
-New Algorithm.
+When we talk about evolutionary algorithms the target is reaching the optimum
+solution for a problem, and this book perfectly describes the process through
+which they have reached the perfect human race. Therefore we want to develop an
+algorithm based on the book's fecundation proceses and compare its behaviour
+with other algorithms. Our main assumption during the design of this process is
+that the division in castes affects the poblation's diversity; we can draw a
+parallel between the collectivism/individualism tensions inherent in the novel
+and the exploration/exploitation balance in population based global algorithms,
+and thus try and apply their solutions to our problems. The main conclusion we
+draw from the book is that what makes collective society happy might make some
+individuals extremely isolated and sad; but if we apply this to our optimization
+realm we can see that what Aldous Huxley might be unwittingly proposing is the
+rough layout of an optimization algorithm, where individuals with different
+fitnesses undergo different differentiation/evolution/reproduction processes. We
+will take it from here to design an optimization algorithm, which of course we
+call {\sf Brave New Algorithm}. Essentially, {\sf BNA} is an evolutionary
+algorithm with mating restrictions and, additionally, differentiated application
+of operators depending on the fitness value.
 
 When designing an algorithm from scratch, we must also make technical
 choices on how this implementation is going to take place, as well as
@@ -64,11 +62,13 @@ final implementation (product) can be performed according to best
 practices in software engineering. Implementation matters
 \cite{merelo2011implementation}, and an agile development process can
 help us get the final result in the most efficient way, guaranteeing
-the quality of any software product \cite{agile_manifesto}.
+the quality of any software product \cite{agile_manifesto}. This manifesto also
+encourages open science, which is the model that we are following from the onset
+of this research line.
 
-The rest of the paper is organized as follows: next, the state of the
-art in this area is examined. The algorithm (and its implementation)
-are described in \ref{sec:algorithm} and \ref{sec:implementation}. The first experiments performed
-with this implementation of the algorithm are shown in
-\ref{sec:experiments}. Finally, we will discuss the results and
-present our conclusions in Section \ref{sec:conc}.
+The rest of the paper is organized as follows: next, the state of the art in
+this area is examined. The algorithm (and its implementation) are described in
+\ref{sec:algorithm} and \ref{sec:implementation}. The first experiments
+performed with this implementation of the algorithm are shown in
+\ref{sec:experiments}. Finally, we will discuss the results and present our
+conclusions in Section \ref{sec:conc}.
