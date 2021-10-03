@@ -1,16 +1,38 @@
 \section{Implementation}
 
-In first implementations of the algorithm it was written in code, but a lot of performance issues arised which
-made the algorithm hard to analyze. For this paper we've chosen a language that joined the ``Petaflop club``, this club
-includes the languages that overcome the 1 petaflop/second as peak performance. We are talking about Julia \cite{julia} 
-programming language, a multiparadigm dynamically tiped language. In this section we will give a bit of insights about the 
-data structures and implementation.
+In first implementations and version of this algorithm was written in Python
+\cite{merelo_molina_2021}, but a lot of performance issues arised which made the
+algorithm hard to analyze. This is why for this second proof of concept, one of
+the requirements was to use a language that provided more performance, and also
+at the same time could have the potential for parallelism. This is why for this
+version we've chosen a language that joined the ``Petaflop club``, which
+includes the languages that overcome the 1 petaflop/second as peak
+performance. We are talking about Julia \cite{julia} programming language, a
+multiparadigm dynamically typed language. In this section we will give a bit of
+insight about the data structures and implementation.
 
-\subsection{Data estructures}
+The agile manifesto has seldom been used in the scientific realm. This manifesto
+has the customer at its center, and exhorts to follow best practices that
+guarantee quality software through the ellaboration of minimally valuable
+products; applying it to science in general as suggested by the agile science
+manifesto \cite{agile_manifesto} it includes also results and any other {\em
+  artifact} into the agile development cycles, with frequent interaction among
+the different stakeholders.
 
-As we mentioned, Julia is a dynamically typed language, but it has some advantages from the static typed, making it possible
-to indicate the types for some variables. So, for making a good use of this paradigm the castes have been defined as different 
-types, for example, for alpha caste:
+Besides, agile science is open science, and all experiments, configuration
+files, and data files, as well as obviously source, are available with an open
+source license in GitHub \url{https://github.com/cecimerelo/UnAlgoritmoFeliz}.
+
+Following best practices in this area, Domain Driven Design
+\cite{evans2004domain} methodology was
+applied to the problem domain. This allowed us to go from the existing user
+stories (which can be read in the above mentioned GitHub repository) to the data
+structures used here.
+
+As we mentioned, Julia is a dynamically typed language, but it has some
+advantages from static typed ones, making it possible to indicate the types for
+some variables. So, for making a good use of this paradigm the castes have been
+defined as different types, for example, for alpha caste:
 
 \begin{lstlisting}[
     basicstyle=\small
@@ -23,9 +45,11 @@ types, for example, for alpha caste:
 The \lstinline{with_kw} decorator is used for defining default values for the entity. Also, the castes have been defined as inmutable,
 because the names will not change during the execution.
 
-This differentiation will alow us to use the multiple dispatch, for example, when defining the evolution operators. As we mentioned 
-in previous sections, depending on the castes the individual will go through different operators. In order to avoid
-using conditionals to check the caste we just need to do the following: 
+This differentiation will alow us to use the multiple dispatch, for example,
+when defining the evolution operators. As we mentioned in previous sections,
+depending on the castes the individual will go through different operators. In
+order to avoid using conditionals to check the caste we just need to do the
+following:
 
 \begin{lstlisting}[
     basicstyle=\small
@@ -49,3 +73,9 @@ With the selector operator defined that way we make sure that each individual go
 
 All the code can be found on GitHub \cite{project_repository}.
 
+
+Following again best practices in the area, all functionality was individually
+tested using automatic testing facilities in GitHub. Eventually, it was uploaded
+to the Julia module repository, JuliaHub and is currently available to be used
+from any Julia application from
+\url{https://juliahub.com/ui/Packages/BraveNewAlgorithm/hZZw9/0.1.0}.
