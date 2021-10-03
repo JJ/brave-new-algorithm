@@ -29,7 +29,7 @@ this kind of problems and is especially appropriate to check if diversity is
 maintained; a loss of diversity will make the algorithm perform poorly on this
 function.
 
-\begin{table}[]
+\begin{table}[h!tbp]
     \caption{Configuration parameters for the diversity exploration}
     \label{tab:config_file_10}
     \centering
@@ -54,7 +54,7 @@ fitness value. In the graphic on top we have the fitness value that resulted fro
 edit distance metric is closely related to the top graphic. The smallest edit distance is in the last generation, so we
 can conclude that the lower the edit distance the higher possibility of the algorithm to get stuck in a local optima. 
 
-\begin{figure}[]
+\begin{figure}[h!tbp]
 	\centering	
 	\includegraphics[scale=0.5]{./figures/config_file_10_Rastrigin_diversity.png}
 	\caption{ Diversity in the execution with the best fitness value for the Rastrigin function }
@@ -68,7 +68,7 @@ this case in the execution with the worst fitness value. The entropy decreases m
 Whilst in the case of the best execution the entropy slope is less strong. Also in the execution with the best fitness we can see how
 when the entropy stays with similar values for multiple generations is when it gets stucked in local optima.
 
-\begin{figure}[]
+\begin{figure}[h!tbp]
 	\centering	
 	\includegraphics[scale=0.5]{./figures/config_file_10_Rastrigin_diversity_comparation.png}
 	\caption{ Comparation of the diversity between the execution with the best and the worst fitness value for the Rastrigin function }
@@ -94,7 +94,7 @@ how the entropy in the basic algorithm looks like more variant, but the values a
 For this section we can conclude that because the Brave new algorithm has a higher standard deviation on the entropy the 
 diversity is mainted throught more generations that for the basic genetic algorithm, resulting in better median for the fitness value.
 
-\begin{table}[]
+\begin{table}[h!tbp]
     \centering
     \caption{Entropy results for Brave New Algorithm (BNA) and a genetic algorith without castes division (GA)}
     \begin{tabular}{|c|c|c|c|c|}
@@ -106,7 +106,7 @@ diversity is mainted throught more generations that for the basic genetic algori
     \label{tab:diversity_comparation}
 \end{table}
 
-\begin{figure}[]
+\begin{figure}[h!tbp]
 	\centering	
 	\includegraphics[scale=0.5]{./figures/Rastrigin_diversity_algs_comparation.png}
 	\caption{ Comparation of the diversity between the best executions of the Brave New Algorithm and a genetic algorith without castes division }
