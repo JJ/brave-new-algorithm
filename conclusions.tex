@@ -4,9 +4,23 @@
 We began the paper asking ourselves how the division in castes affected
 the diversity of the algorithm, with the goal in mind of making the algorithm avoid getting stuck
 in local optima as late as possible. We took the entropy as the metric for measuring this, and
-through the different experiments we've reached the conclusion that the division make
-the algorithm keep the diversity more generations than the basic genetic algorithm. 
+through the different experiments we've reached the conclusion that this division makes
+the algorithm keep the diversity more generations than the basic genetic
+algorithm. This leads us to our main conclusion, which is that the proof of
+concept of this new algorithm contains a lot of promise for achieving good
+results on a range of different optimization problems, all within a classical
+evolutionary algorithm framework that uses a metaphor as inspiration, and not to
+obscure the actual working of the algorithm.
 
-For future works on this algorithm it would be interesting to label all the individuals in
+Working with Julia also provided a boost to rapid development, as well as high
+performance for the implementation, which was almost 3 orders of magnitude
+fasters that the (admittedly naïve) implementation in Python. The genericity of
+Julia will allow us to, eventually, accomodate different types of evolvable
+solutions, and of course to extend it into a mainstream evolutionary algorithm,
+or else make it inter-operable with one of the other Julia metaheuristic
+libraries that are available right now.
+
+As future works on this algorithm it would be interesting to label all the individuals in
 the population and investigate how they move between the different castes. Also, explore
-how the diversity behaves when talking about Multiobjective Optimization Problems.
+how the diversity behaves when talking about Multiobjective Optimization
+Problems, as well as dynamic optimization problems.
