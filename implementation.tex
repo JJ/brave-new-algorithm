@@ -1,0 +1,51 @@
+\section{Implementation}
+
+In first implementations of the algorithm it was written in code, but a lot of performance issues arised which
+made the algorithm hard to analyze. For this paper we've chosen a language that joined the ``Petaflop club``, this club
+includes the languages that overcome the 1 petaflop/second as peak performance. We are talking about Julia \cite{julia} 
+programming language, a multiparadigm dynamically tiped language. In this section we will give a bit of insights about the 
+data structures and implementation.
+
+\subsection{Data estructures}
+
+As we mentioned, Julia is a dynamically typed language, but it has some advantages from the static typed, making it possible
+to indicate the types for some variables. So, for making a good use of this paradigm the castes have been defined as different 
+types, for example, for alpha caste:
+
+\begin{lstlisting}[
+    basicstyle=\small
+]
+    @with_kw struct ALPHA <: Caste
+        name::String = "ALPHA"
+    end
+\end{lstlisting}
+
+The \lstinline{with_kw} decorator is used for defining default values for the entity. Also, the castes have been defined as inmutable,
+because the names will not change during the execution.
+
+This differentiation will alow us to use the multiple dispatch, for example, when defining the evolution operators. As we mentioned 
+in previous sections, depending on the castes the individual will go through different operators. In order to avoid
+using conditionals to check the caste we just need to do the following: 
+
+\begin{lstlisting}[
+    basicstyle=\small
+]
+    selector_operator(
+        caste::ALPHA, 
+        caste_population
+    )
+    selector_operator(
+        caste::BETA, 
+        caste_population, 
+        alpha_reproduction_pool
+    )
+    selector_operator(
+        caste, 
+        caste_population
+    )
+\end{lstlisting}
+
+With the selector operator defined that way we make sure that each individual go through the corresponding process.
+
+All the code can be found on GitHub \cite{project_repository}.
+
