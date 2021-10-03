@@ -21,8 +21,13 @@ and edit distance show a great correlation with the increment and decrement of t
 
 \subsection{Diversity in Brave new algorithm}
 
-For these experiments we will use the configuration shown in Table \ref{tab:config_file_10}. The fitness functions evaluated will be the Rastrigin
-function from the \emph{Black-box optimization benchmarking} \cite{BBOB}.
+For these experiments we will use the configuration shown in Table
+\ref{tab:config_file_10}. The fitness functions evaluated will be the Rastrigin
+function from the \emph{Black-box optimization benchmarking} \cite{BBOB}. This
+is a multimodal function, that allows to check the behavior of the algorithm in
+this kind of problems and is especially appropriate to check if diversity is
+maintained; a loss of diversity will make the algorithm perform poorly on this
+function.
 
 \begin{table}[]
     \caption{Configuration parameters for the diversity exploration}
