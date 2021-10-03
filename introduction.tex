@@ -1,7 +1,19 @@
 \section{Introduction}
 
 % Introduce the problem: diversity in metaheuristics/global optimization problems
+Population-based algorithms \cite{prugel2010benefits} are global optimization, stochastic
+methods that use different techniques for exploring the search space
+in such a way that it makes finding the solution feasible in a
+reasonable amount of time. As such, they must strike a balance between
+feasibility (exploitation of the features found in the current
+population of solutions to optimize fitness) and off-line performance
+(exploration of parts of the search space that might hold the key to
+those solutions) \cite{xu2014exploration}. And in this balance,
+diversity is one of the keys \cite{alba2005exploration}. This drives
+the search for new algorithms that explicitly try to keep this balance
+in a {\em comfort zone}.
 
+In this search, inspiration may arrive from unexpected places.
 At the beginning of the year one of the authors read the famous book
 by Aldous Huxley: A brave new world \cite{huxley2007brave}. The novel
 is a distopy that describes the development in reproductive
@@ -25,12 +37,25 @@ author was to compare collectivist and individualist culture
 \cite{mathews2012happiness}.
 
 When we talk about evolutionary algorithms the target is reaching the
-optimum solution for a problem., and this books perfectly describes
+optimum solution for a problem, and this books perfectly describes
 the process through which they have reached the perfect human
-race. Thereforth we want to develop an algorithm based on the book's
+race. Therefore we want to develop an algorithm based on the book's
 fecundation proceses and compare its behaviour with other
-algorithms. Also, investigating how the division in castes affects the
-poblation's diversity.
+algorithms. Our main assumption during the design of this process is
+that the division in castes affects the
+poblation's diversity; we can draw a parallel between the
+collectivism/individualism tensions inherent in the novel and the
+exploration/exploitation balance in population based global
+algorithms, and thus try and apply their solutions to our
+problems. The main conclusion we draw from the book is that what makes
+collective society happy might make some individuals extremely
+isolated and sad; but if we apply this to our optimization realm we
+can see that what Aldous Huxley might be unwittingly proposing is the
+rough layout of an optimization algorithm, where individuals with
+different fitnesses undergo different
+differentiation/evolution/reproduction processes. We will take it from
+here to design an optimization algorith, which of course we call Brave
+New Algorithm.
 
 % Point at possible solutions to the problem
 
