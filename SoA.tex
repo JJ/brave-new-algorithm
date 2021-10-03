@@ -36,6 +36,18 @@ sentence
 in \cite{DBLP:journals/corr/abs-2107-00314} brings us to the main
 theme in this paper. By ``considering the horse'', the author of the
 novel refers to how exploration, the enhancement of diversity, is able
-to find new solutions to problems.
+to find new solutions to problems. Keeping diversity hight becones specially
+necessary in dynamic environments \cite{cruz2011optimization} since it allows
+the population to maintain a certain {\em memory} of what happened in the past.
 
-% What other efforts have been made in this area
+Many different techniques have been used to enhance diversity in evolutionary
+algorithms, from migration policies \cite{10.1007/978-3-642-29178-4_6} through
+simple mutation \cite{jackson2011mutation} to {\em
+  reactive} methods that are ``aware'' of diversity and kick-in when diversity
+is low \cite{zaharie2006diversity}. However, this adds an additional layer of
+complexity to the algorithm, needing the establishment of thresholds and/or
+dynamic measures.
+
+In this paper we will present a proof of concept and initial experiments for
+{\sf BNA}, which preserves diversity through {\em natural} mechanisms, and uses
+it to achieve higher performance in, initially, static problems.
